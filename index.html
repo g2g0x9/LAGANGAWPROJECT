@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="La Ganga – Fan page oficial del grupo de Westcol. Rankings de MVPs, mejores clips, estadísticas y comunidad." />
+  <title>La Ganga – Fan Page de Westcol</title>
+
+  <!-- Fonts: Bebas Neue (titles) + Inter (body) + JetBrains Mono (stats) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ==============================
+       NAVBAR
+  ============================== -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="container">
+      <a href="#home" class="navbar__logo" aria-label="La Ganga – inicio">
+        <div class="navbar__logo-icon" aria-hidden="true">🎮</div>
+        <span class="navbar__logo-text">LA GANGA</span>
+      </a>
+
+      <ul class="navbar__nav" role="list">
+        <li><a href="#home"     class="active">Inicio</a></li>
+        <li><a href="#rankings">Rankings</a></li>
+        <li><a href="#clips">Clips</a></li>
+        <li><a href="#comunidad">Comunidad</a></li>
+      </ul>
+
+      <div class="navbar__live-badge" aria-label="En vivo ahora">
+        <span class="live-dot" aria-hidden="true"></span>
+        EN VIVO
+      </div>
+
+      <button
+        class="navbar__hamburger"
+        id="hamburger"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="menu" aria-label="Menú móvil">
+    <a href="#home"      role="menuitem">🏠 Inicio</a>
+    <a href="#rankings"  role="menuitem">🏆 Rankings</a>
+    <a href="#clips"     role="menuitem">🎬 Clips</a>
+    <a href="#comunidad" role="menuitem">💬 Comunidad</a>
+  </div>
+
+
+  <!-- ==============================
+       HERO SECTION
+  ============================== -->
+  <section class="hero" id="home">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__grid-lines" aria-hidden="true"></div>
+
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__eyebrow animate-fade-up">
+          <span>⚡</span> Fan Page Oficial
+        </div>
+        <h1 class="title-xl hero__title animate-fade-up delay-1">
+          LA GANGA<br />
+          <span class="highlight">DE WESTCOL</span>
+        </h1>
+        <p class="hero__subtitle animate-fade-up delay-2">
+          El dashboard definitivo para los fans del mejor grupo del stream.
+          Sigue los MVPs, los clips más épicos y la actividad de la comunidad en tiempo real.
+        </p>
+        <div class="hero__actions animate-fade-up delay-3">
+          <a href="#rankings" class="btn btn-primary">
+            🏆 Ver Rankings
+          </a>
+          <a href="#clips" class="btn btn-outline">
+            🎬 Mejores Clips
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero visual: mini stat cards -->
+      <div class="hero__visual" aria-label="Estadísticas rápidas">
+        <div class="mini-card animate-fade-up delay-2">
+          <div class="mini-card__icon mini-card__icon--purple" aria-hidden="true">👑</div>
+          <div class="mini-card__info">
+            <div class="mini-card__label">MVP del mes</div>
+            <div class="mini-card__value">Westcol</div>
+          </div>
+          <span class="mini-card__trend mini-card__trend--up">↑ #1</span>
+        </div>
+
+        <div class="mini-card animate-fade-up delay-3">
+          <div class="mini-card__icon mini-card__icon--amber" aria-hidden="true">👁️</div>
+          <div class="mini-card__info">
+            <div class="mini-card__label">Espectadores activos</div>
+            <div class="mini-card__value">
+              <span class="counter" data-target="48200" data-suffix="">48,200</span>
+            </div>
+          </div>
+          <span class="mini-card__trend mini-card__trend--up">↑ 12%</span>
+        </div>
+
+        <div class="mini-card animate-fade-up delay-4">
+          <div class="mini-card__icon mini-card__icon--green" aria-hidden="true">🎬</div>
+          <div class="mini-card__info">
+            <div class="mini-card__label">Clips esta semana</div>
+            <div class="mini-card__value">
+              <span class="counter" data-target="137" data-suffix="">137</span>
+            </div>
+          </div>
+          <span class="mini-card__trend mini-card__trend--up">↑ 23</span>
+        </div>
+
+        <div class="mini-card animate-fade-up delay-5">
+          <div class="mini-card__icon mini-card__icon--red" aria-hidden="true">🔴</div>
+          <div class="mini-card__info">
+            <div class="mini-card__label">Horas en vivo hoy</div>
+            <div class="mini-card__value">
+              <span class="counter" data-target="6" data-suffix="h">6h</span>
+            </div>
+          </div>
+          <span class="mini-card__trend mini-card__trend--up">↑ Live</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       QUICK STATS BAR
+  ============================== -->
+  <div class="stats-bar" aria-label="Estadísticas globales">
+    <div class="container">
+      <div class="stat-item">
+        <div class="stat-item__value">
+          <span class="counter" data-target="2400000" data-suffix="">2.4M</span><span style="color:var(--clr-secondary)">+</span>
+        </div>
+        <div class="stat-item__label">Seguidores Twitch</div>
+        <div class="stat-item__delta text-success label-mono">↑ 4.2%</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">
+          <span class="counter" data-target="890000" data-suffix="">890K</span><span style="color:var(--clr-secondary)">+</span>
+        </div>
+        <div class="stat-item__label">Clips totales</div>
+        <div class="stat-item__delta text-success label-mono">↑ 1.8%</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">
+          <span class="counter" data-target="42" data-suffix="">42</span><span style="color:var(--clr-secondary)">K</span>
+        </div>
+        <div class="stat-item__label">Miembros La Ganga</div>
+        <div class="stat-item__delta text-success label-mono">↑ 320 hoy</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__value">
+          <span class="counter" data-target="18" data-suffix="">18</span><span style="color:var(--clr-secondary)">h</span>
+        </div>
+        <div class="stat-item__label">Horas stream esta semana</div>
+        <div class="stat-item__delta text-muted label-mono">– sin cambio</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==============================
+       RANKINGS SECTION
+  ============================== -->
+  <section class="rankings" id="rankings">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-header__left">
+          <div class="section-eyebrow">Rankings</div>
+          <h2 class="title-lg">MVPs de La Ganga</h2>
+          <p class="text-muted" style="font-size:.9rem;margin-top:.3rem;">
+            Clasificación mensual basada en puntos de stream, clips virales y actividad de comunidad.
+          </p>
+        </div>
+        <div>
+          <span class="badge badge-live">🔴 Actualizado en vivo</span>
+        </div>
+      </div>
+
+      <!-- Podium top 3 -->
+      <div class="podium animate-on-scroll" role="list" aria-label="Top 3 del podio">
+
+        <!-- 2nd place -->
+        <div class="podium__item podium__item--2" role="listitem" aria-label="2do lugar">
+          <div class="podium__avatar-wrap">
+            <div class="podium__avatar-placeholder">CG</div>
+            <span class="podium__rank-badge" aria-label="Posición 2">2</span>
+          </div>
+          <div class="podium__name">ChurroCG</div>
+          <div class="podium__score">
+            <span>8,740</span> pts
+          </div>
+          <div class="podium__platform" aria-hidden="true"></div>
+        </div>
+
+        <!-- 1st place -->
+        <div class="podium__item podium__item--1" role="listitem" aria-label="1er lugar">
+          <span class="podium__crown" aria-hidden="true">👑</span>
+          <div class="podium__avatar-wrap">
+            <div class="podium__avatar-placeholder">WC</div>
+            <span class="podium__rank-badge" aria-label="Posición 1">1</span>
+          </div>
+          <div class="podium__name">Westcol</div>
+          <div class="podium__score">
+            <span>12,500</span> pts
+          </div>
+          <div class="podium__platform" aria-hidden="true"></div>
+        </div>
+
+        <!-- 3rd place -->
+        <div class="podium__item podium__item--3" role="listitem" aria-label="3er lugar">
+          <div class="podium__avatar-wrap">
+            <div class="podium__avatar-placeholder">KL</div>
+            <span class="podium__rank-badge" aria-label="Posición 3">3</span>
+          </div>
+          <div class="podium__name">Kalocho</div>
+          <div class="podium__score">
+            <span>7,210</span> pts
+          </div>
+          <div class="podium__platform" aria-hidden="true"></div>
+        </div>
+
+      </div>
+
+      <!-- Full Rankings Table -->
+      <div class="rankings-table-wrap animate-on-scroll" role="region" aria-label="Tabla completa de rankings">
+        <table class="rankings-table" aria-label="Rankings de miembros de La Ganga">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Jugador</th>
+              <th scope="col" data-sort="pts">Puntos</th>
+              <th scope="col" data-sort="clips">Clips</th>
+              <th scope="col" data-sort="hrs">Horas</th>
+              <th scope="col">Tendencia</th>
+              <th scope="col">Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="rank-num rank-num--top">1</span></td>
+              <td>
+                <div class="player-cell">
+                  <div class="player-avatar-sm player-avatar-sm--1" aria-hidden="true">WC</div>
+                  <div>
+                    <div class="player-name">Westcol</div>
+                    <div class="player-handle">@westcol</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="stat-cell text-accent" data-col="pts">12,500</span></td>
+              <td><span class="stat-cell" data-col="clips">342</span></td>
+              <td><span class="stat-cell" data-col="hrs">89h</span></td>
+              <td>
+                <div class="sparkline" aria-label="Tendencia de puntos">
+                  <span style="height:40%"></span>
+                  <span style="height:55%"></span>
+                  <span style="height:45%"></span>
+                  <span style="height:70%"></span>
+                  <span style="height:65%"></span>
+                  <span style="height:80%"></span>
+                  <span class="bar-chart__bar--accent" style="height:100%"></span>
+                </div>
+              </td>
+              <td><span class="badge badge-mvp">👑 MVP</span></td>
+            </tr>
+
+            <tr>
+              <td><span class="rank-num rank-num--top">2</span></td>
+              <td>
+                <div class="player-cell">
+                  <div class="player-avatar-sm player-avatar-sm--2" aria-hidden="true">CG</div>
+                  <div>
+                    <div class="player-name">ChurroCG</div>
+                    <div class="player-handle">@churrocg</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="stat-cell" data-col="pts" style="color:#94A3B8;">8,740</span></td>
+              <td><span class="stat-cell" data-col="clips">218</span></td>
+              <td><span class="stat-cell" data-col="hrs">67h</span></td>
+              <td>
+                <div class="sparkline" aria-label="Tendencia de puntos">
+                  <span style="height:60%"></span>
+                  <span style="height:65%"></span>
+                  <span style="height:55%"></span>
+                  <span style="height:75%"></span>
+                  <span style="height:70%"></span>
+                  <span style="height:85%"></span>
+                  <span style="height:78%"></span>
+                </div>
+              </td>
+              <td><span class="badge badge-top">⬆️ TOP</span></td>
+            </tr>
+
+            <tr>
+              <td><span class="rank-num rank-num--top">3</span></td>
+              <td>
+                <div class="player-cell">
+                  <div class="player-avatar-sm player-avatar-sm--3" aria-hidden="true">KL</div>
+                  <div>
+                    <div class="player-name">Kalocho</div>
+                    <div class="player-handle">@kalocho</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="stat-cell" data-col="pts" style="color:#D97706;">7,210</span></td>
+              <td><span class="stat-cell" data-col="clips">195</span></td>
+              <td><span class="stat-cell" data-col="hrs">54h</span></td>
+              <td>
+                <div class="sparkline" aria-label="Tendencia de puntos">
+                  <span style="height:30%"></span>
+                  <span style="height:45%"></span>
+                  <span style="height:60%"></span>
+                  <span style="height:50%"></span>
+                  <span style="height:65%"></span>
+                  <span style="height:70%"></span>
+                  <span style="height:80%"></span>
+                </div>
+              </td>
+              <td><span class="badge badge-top">⬆️ TOP</span></td>
+            </tr>
+
+            <tr>
+              <td><span class="rank-num">4</span></td>
+              <td>
+                <div class="player-cell">
+                  <div class="player-avatar-sm" aria-hidden="true">LK</div>
+                  <div>
+                    <div class="player-name">LaCandela</div>
+                    <div class="player-handle">@lacandela</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="stat-cell" data-col="pts">5,890</span></td>
+              <td><span class="stat-cell" data-col="clips">156</span></td>
+              <td><span class="stat-cell" data-col="hrs">41h</span></td>
+              <td>
+                <div class="sparkline" aria-label="Tendencia de puntos">
+                  <span style="height:50%"></span>
+                  <span style="height:40%"></span>
+                  <span style="height:55%"></span>
+                  <span style="height:48%"></span>
+                  <span style="height:60%"></span>
+                  <span style="height:58%"></span>
+                  <span style="height:65%"></span>
+                </div>
+              </td>
+              <td><span class="badge badge-new">🆕 NUEVO</span></td>
+            </tr>
+
+            <tr>
+              <td><span class="rank-num">5</span></td>
+              <td>
+                <div class="player-cell">
+                  <div class="player-avatar-sm" aria-hidden="true">RK</div>
+                  <div>
+                    <div class="player-name">Raka</div>
+                    <div class="player-handle">@rakagaming</div>
+                  </div>
+                </div>
+              </td>
+              <td><span class="stat-cell" data-col="pts">4,320</span></td>
+              <td><span class="stat-cell" data-col="clips">112</span></td>
+              <td><span class="stat-cell" data-col="hrs">35h</span></td>
+              <td>
+                <div class="sparkline" aria-label="Tendencia de puntos">
+                  <span style="height:70%"></span>
+                  <span style="height:60%"></span>
+                  <span style="height:50%"></span>
+                  <span style="height:55%"></span>
+                  <span style="height:45%"></span>
+                  <span style="height:50%"></span>
+                  <span style="height:48%"></span>
+                </div>
+              </td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Category progress bars -->
+      <div style="margin-top:2.5rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;">
+        <div class="animate-on-scroll" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:1.25rem;">
+          <p style="font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--clr-text-3);margin-bottom:1rem;">Participación por categoría</p>
+
+          <div style="display:flex;flex-direction:column;gap:.8rem;">
+            <div>
+              <div style="display:flex;justify-content:space-between;margin-bottom:.35rem;">
+                <span style="font-size:.8rem;font-weight:600;">Clips virales</span>
+                <span class="label-mono text-accent">78%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-bar__fill progress-bar__fill--gold" data-width="78%" style="width:0%"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;margin-bottom:.35rem;">
+                <span style="font-size:.8rem;font-weight:600;">Horas en stream</span>
+                <span class="label-mono" style="color:var(--clr-secondary);">65%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-bar__fill" data-width="65%" style="width:0%"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;margin-bottom:.35rem;">
+                <span style="font-size:.8rem;font-weight:600;">Actividad comunidad</span>
+                <span class="label-mono text-success">91%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-bar__fill" data-width="91%" style="width:0%;background:linear-gradient(90deg,var(--clr-success),#34D399)"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;margin-bottom:.35rem;">
+                <span style="font-size:.8rem;font-weight:600;">Puntos por raids</span>
+                <span class="label-mono text-muted">43%</span>
+              </div>
+              <div class="progress-bar"><div class="progress-bar__fill" data-width="43%" style="width:0%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weekly activity bar chart -->
+        <div class="animate-on-scroll" style="background:var(--clr-surface);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:1.25rem;">
+          <p style="font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--clr-text-3);margin-bottom:.5rem;">Actividad semanal</p>
+          <p style="font-size:.7rem;color:var(--clr-text-3);margin-bottom:.75rem;">Clips publicados por día</p>
+          <div class="bar-chart" role="img" aria-label="Gráfico de clips por día de la semana">
+            <div class="bar-chart__bar" style="height:45%" title="Lunes: 18 clips"></div>
+            <div class="bar-chart__bar" style="height:60%" title="Martes: 24 clips"></div>
+            <div class="bar-chart__bar" style="height:35%" title="Miércoles: 14 clips"></div>
+            <div class="bar-chart__bar" style="height:80%" title="Jueves: 32 clips"></div>
+            <div class="bar-chart__bar bar-chart__bar--accent" style="height:100%" title="Viernes: 40 clips"></div>
+            <div class="bar-chart__bar bar-chart__bar--accent" style="height:95%" title="Sábado: 38 clips"></div>
+            <div class="bar-chart__bar" style="height:55%" title="Domingo: 22 clips"></div>
+          </div>
+          <div class="bar-chart__labels" aria-hidden="true">
+            <div class="bar-chart__label">L</div>
+            <div class="bar-chart__label">M</div>
+            <div class="bar-chart__label">X</div>
+            <div class="bar-chart__label">J</div>
+            <div class="bar-chart__label">V</div>
+            <div class="bar-chart__label">S</div>
+            <div class="bar-chart__label">D</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       CLIPS SECTION
+  ============================== -->
+  <section class="clips" id="clips">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-header__left">
+          <div class="section-eyebrow">Clips</div>
+          <h2 class="title-lg">Momentos épicos</h2>
+          <p class="text-muted" style="font-size:.9rem;margin-top:.3rem;">
+            Los mejores momentos capturados por la comunidad.
+          </p>
+        </div>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="clips-tabs" role="tablist" aria-label="Filtrar clips">
+        <button class="clips-tab active" role="tab" data-filter="all"        aria-selected="true" >Todos</button>
+        <button class="clips-tab"        role="tab" data-filter="funny"      aria-selected="false">😂 Funny</button>
+        <button class="clips-tab"        role="tab" data-filter="pro"        aria-selected="false">🔥 Pro Plays</button>
+        <button class="clips-tab"        role="tab" data-filter="fails"      aria-selected="false">💀 Fails</button>
+        <button class="clips-tab"        role="tab" data-filter="reacciones" aria-selected="false">😲 Reacciones</button>
+      </div>
+
+      <!-- Clips grid -->
+      <div class="clips-grid" role="list" aria-label="Galería de clips">
+
+        <article class="clip-card" role="listitem" data-category="funny">
+          <div class="clip-card__thumb" aria-hidden="true">
+            <div class="clip-card__thumb-placeholder">🎮</div>
+            <div class="clip-card__play-overlay">
+              <div class="clip-card__play-btn" aria-label="Reproducir clip">▶</div>
+            </div>
+            <span class="clip-card__duration">1:23</span>
+          </div>
+          <div class="clip-card__body">
+            <div class="clip-card__meta">
+              <div class="clip-card__author">
+                <div class="clip-card__author-dot" aria-hidden="true">WC</div>
+                Westcol
+              </div>
+              <span class="badge badge-mvp">🔥 Viral</span>
+            </div>
+            <h3 class="clip-card__title">Cuando la Ganga casi pierde por una apuesta ridícula 💸</h3>
+            <div class="clip-card__stats">
+              <span class="clip-stat" data-tooltip="Vistas totales">👁️ 248K</span>
+              <span class="clip-stat" data-tooltip="Me gusta">❤️ 12.4K</span>
+              <span class="clip-stat" data-tooltip="Hace cuánto fue publicado">🕐 2h</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="clip-card" role="listitem" data-category="pro">
+          <div class="clip-card__thumb" aria-hidden="true">
+            <div class="clip-card__thumb-placeholder">⚡</div>
+            <div class="clip-card__play-overlay">
+              <div class="clip-card__play-btn" aria-label="Reproducir clip">▶</div>
+            </div>
+            <span class="clip-card__duration">0:47</span>
+          </div>
+          <div class="clip-card__body">
+            <div class="clip-card__meta">
+              <div class="clip-card__author">
+                <div class="clip-card__author-dot" aria-hidden="true">CG</div>
+                ChurroCG
+              </div>
+              <span class="badge badge-top">⚡ Top</span>
+            </div>
+            <h3 class="clip-card__title">Jugada IMPOSIBLE que nadie vio venir – modo solo</h3>
+            <div class="clip-card__stats">
+              <span class="clip-stat" data-tooltip="Vistas totales">👁️ 182K</span>
+              <span class="clip-stat" data-tooltip="Me gusta">❤️ 9.8K</span>
+              <span class="clip-stat" data-tooltip="Hace cuánto fue publicado">🕐 5h</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="clip-card" role="listitem" data-category="fails">
+          <div class="clip-card__thumb" aria-hidden="true">
+            <div class="clip-card__thumb-placeholder">💀</div>
+            <div class="clip-card__play-overlay">
+              <div class="clip-card__play-btn" aria-label="Reproducir clip">▶</div>
+            </div>
+            <span class="clip-card__duration">2:01</span>
+          </div>
+          <div class="clip-card__body">
+            <div class="clip-card__meta">
+              <div class="clip-card__author">
+                <div class="clip-card__author-dot" aria-hidden="true">KL</div>
+                Kalocho
+              </div>
+              <span class="badge badge-new">💀 Fail</span>
+            </div>
+            <h3 class="clip-card__title">El fail más épico de la temporada – cayó en vivo</h3>
+            <div class="clip-card__stats">
+              <span class="clip-stat" data-tooltip="Vistas totales">👁️ 95K</span>
+              <span class="clip-stat" data-tooltip="Me gusta">❤️ 7.2K</span>
+              <span class="clip-stat" data-tooltip="Hace cuánto fue publicado">🕐 1d</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="clip-card" role="listitem" data-category="reacciones">
+          <div class="clip-card__thumb" aria-hidden="true">
+            <div class="clip-card__thumb-placeholder">😱</div>
+            <div class="clip-card__play-overlay">
+              <div class="clip-card__play-btn" aria-label="Reproducir clip">▶</div>
+            </div>
+            <span class="clip-card__duration">3:14</span>
+          </div>
+          <div class="clip-card__body">
+            <div class="clip-card__meta">
+              <div class="clip-card__author">
+                <div class="clip-card__author-dot" aria-hidden="true">LC</div>
+                LaCandela
+              </div>
+              <span class="badge badge-top">😲 React</span>
+            </div>
+            <h3 class="clip-card__title">Reaccionando al clip más viral de La Ganga esta semana</h3>
+            <div class="clip-card__stats">
+              <span class="clip-stat" data-tooltip="Vistas totales">👁️ 74K</span>
+              <span class="clip-stat" data-tooltip="Me gusta">❤️ 5.1K</span>
+              <span class="clip-stat" data-tooltip="Hace cuánto fue publicado">🕐 1d</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="clip-card" role="listitem" data-category="funny">
+          <div class="clip-card__thumb" aria-hidden="true">
+            <div class="clip-card__thumb-placeholder">😂</div>
+            <div class="clip-card__play-overlay">
+              <div class="clip-card__play-btn" aria-label="Reproducir clip">▶</div>
+            </div>
+            <span class="clip-card__duration">0:58</span>
+          </div>
+          <div class="clip-card__body">
+            <div class="clip-card__meta">
+              <div class="clip-card__author">
+                <div class="clip-card__author-dot" aria-hidden="true">RK</div>
+                Raka
+              </div>
+              <span class="badge badge-live">🔴 Nuevo</span>
+            </div>
+            <h3 class="clip-card__title">Nadie esperaba esta reacción al chat – momento legendario</h3>
+            <div class="clip-card__stats">
+              <span class="clip-stat" data-tooltip="Vistas totales">👁️ 58K</span>
+              <span class="clip-stat" data-tooltip="Me gusta">❤️ 4.3K</span>
+              <span class="clip-stat" data-tooltip="Hace cuánto fue publicado">🕐 3h</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="clip-card" role="listitem" data-category="pro">
+          <div class="clip-card__thumb" aria-hidden="true">
+            <div class="clip-card__thumb-placeholder">🏆</div>
+            <div class="clip-card__play-overlay">
+              <div class="clip-card__play-btn" aria-label="Reproducir clip">▶</div>
+            </div>
+            <span class="clip-card__duration">1:45</span>
+          </div>
+          <div class="clip-card__body">
+            <div class="clip-card__meta">
+              <div class="clip-card__author">
+                <div class="clip-card__author-dot" aria-hidden="true">WC</div>
+                Westcol
+              </div>
+              <span class="badge badge-mvp">👑 MVP</span>
+            </div>
+            <h3 class="clip-card__title">Clutch imposible – ganó solo contra todo el equipo rival</h3>
+            <div class="clip-card__stats">
+              <span class="clip-stat" data-tooltip="Vistas totales">👁️ 310K</span>
+              <span class="clip-stat" data-tooltip="Me gusta">❤️ 18.7K</span>
+              <span class="clip-stat" data-tooltip="Hace cuánto fue publicado">🕐 2d</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- .clips-grid -->
+
+    </div>
+  </section>
+
+
+  <!-- ==============================
+       COMMUNITY SECTION
+  ============================== -->
+  <section class="community" id="comunidad">
+    <div class="container">
+
+      <!-- Feed column -->
+      <div>
+        <div class="section-header" style="margin-bottom:1.5rem;">
+          <div class="section-header__left">
+            <div class="section-eyebrow">Comunidad</div>
+            <h2 class="title-lg">Actividad reciente</h2>
+          </div>
+        </div>
+
+        <div class="feed" role="feed" aria-label="Feed de actividad de la comunidad">
+
+          <div class="feed-item" role="article">
+            <div class="feed-item__avatar" style="background:rgba(124,58,237,.15);color:var(--clr-secondary);" aria-hidden="true">WC</div>
+            <div class="feed-item__content">
+              <div class="feed-item__header">
+                <span class="feed-item__user">Westcol</span>
+                <span class="feed-item__action">compartió un clip</span>
+                <span class="feed-item__time">hace 2 min</span>
+              </div>
+              <p class="feed-item__text">¡Ese clutch fue <strong>real</strong>! El chat se volvió loco 🔥</p>
+            </div>
+          </div>
+
+          <div class="feed-item" role="article">
+            <div class="feed-item__avatar" style="background:rgba(245,158,11,.12);color:var(--clr-accent);" aria-hidden="true">CG</div>
+            <div class="feed-item__content">
+              <div class="feed-item__header">
+                <span class="feed-item__user">ChurroCG</span>
+                <span class="feed-item__action">subió al <strong style="color:var(--clr-secondary);">#2</strong></span>
+                <span class="feed-item__time">hace 15 min</span>
+              </div>
+              <p class="feed-item__text">Nuevos <strong>+240 puntos</strong> después del stream de anoche 💪</p>
+            </div>
+          </div>
+
+          <div class="feed-item" role="article">
+            <div class="feed-item__avatar" style="background:rgba(16,185,129,.1);color:var(--clr-success);" aria-hidden="true">🎬</div>
+            <div class="feed-item__content">
+              <div class="feed-item__header">
+                <span class="feed-item__user">Sistema</span>
+                <span class="feed-item__action">nuevo clip viral</span>
+                <span class="feed-item__time">hace 1h</span>
+              </div>
+              <p class="feed-item__text">El clip <strong>"Jugada IMPOSIBLE"</strong> superó las <strong>180K vistas</strong> en 4h 🚀</p>
+            </div>
+          </div>
+
+          <div class="feed-item" role="article">
+            <div class="feed-item__avatar" style="background:rgba(239,68,68,.1);color:var(--clr-danger);" aria-hidden="true">🔴</div>
+            <div class="feed-item__content">
+              <div class="feed-item__header">
+                <span class="feed-item__user">La Ganga</span>
+                <span class="feed-item__action">inició stream</span>
+                <span class="feed-item__time">hace 3h</span>
+              </div>
+              <p class="feed-item__text">Stream en vivo ahora mismo – <strong>48,200 espectadores</strong> 📺</p>
+            </div>
+          </div>
+
+          <div class="feed-item" role="article">
+            <div class="feed-item__avatar" style="background:rgba(168,85,247,.12);color:var(--clr-secondary);" aria-hidden="true">KL</div>
+            <div class="feed-item__content">
+              <div class="feed-item__header">
+                <span class="feed-item__user">Kalocho</span>
+                <span class="feed-item__action">desbloqueó logro</span>
+                <span class="feed-item__time">hace 5h</span>
+              </div>
+              <p class="feed-item__text">🏅 Primer streaker de la semana con <strong>7 días</strong> consecutivos en vivo.</p>
+            </div>
+          </div>
+
+        </div><!-- .feed -->
+      </div>
+
+      <!-- Sidebar: mini leaderboard + chart -->
+      <div>
+        <div class="section-header" style="margin-bottom:1.5rem;">
+          <div class="section-header__left">
+            <div class="section-eyebrow">Top Fans</div>
+            <h2 class="title-md">Fans activos</h2>
+          </div>
+        </div>
+
+        <div class="mini-leaderboard animate-on-scroll" role="region" aria-label="Mini leaderboard de fans activos">
+          <div class="mini-leaderboard__header">
+            🎖️ Esta semana
+            <span class="badge badge-live" style="font-size:.65rem;">EN VIVO</span>
+          </div>
+
+          <div class="mini-leaderboard__item">
+            <span class="mini-leaderboard__pos mini-leaderboard__pos--1" aria-label="Posición 1">1</span>
+            <div class="mini-leaderboard__avatar" style="background:rgba(245,158,11,.15);color:var(--clr-accent);">GG</div>
+            <div class="mini-leaderboard__info">
+              <div class="mini-leaderboard__name">GangaFan1</div>
+              <div class="mini-leaderboard__points">1,240 puntos</div>
+            </div>
+            <span class="mini-leaderboard__score">12.4K</span>
+          </div>
+
+          <div class="mini-leaderboard__item">
+            <span class="mini-leaderboard__pos mini-leaderboard__pos--2" aria-label="Posición 2">2</span>
+            <div class="mini-leaderboard__avatar" style="background:rgba(148,163,184,.1);color:#94A3B8;">PR</div>
+            <div class="mini-leaderboard__info">
+              <div class="mini-leaderboard__name">ProWatcher</div>
+              <div class="mini-leaderboard__points">980 puntos</div>
+            </div>
+            <span class="mini-leaderboard__score">9.8K</span>
+          </div>
+
+          <div class="mini-leaderboard__item">
+            <span class="mini-leaderboard__pos mini-leaderboard__pos--3" aria-label="Posición 3">3</span>
+            <div class="mini-leaderboard__avatar" style="background:rgba(217,119,6,.1);color:#D97706;">XZ</div>
+            <div class="mini-leaderboard__info">
+              <div class="mini-leaderboard__name">XZclipmaster</div>
+              <div class="mini-leaderboard__points">760 puntos</div>
+            </div>
+            <span class="mini-leaderboard__score">7.6K</span>
+          </div>
+
+          <div class="mini-leaderboard__item">
+            <span class="mini-leaderboard__pos" aria-label="Posición 4">4</span>
+            <div class="mini-leaderboard__avatar">SR</div>
+            <div class="mini-leaderboard__info">
+              <div class="mini-leaderboard__name">StreamerRico</div>
+              <div class="mini-leaderboard__points">540 puntos</div>
+            </div>
+            <span class="mini-leaderboard__score" style="color:var(--clr-text-2);">5.4K</span>
+          </div>
+
+          <div class="mini-leaderboard__item">
+            <span class="mini-leaderboard__pos" aria-label="Posición 5">5</span>
+            <div class="mini-leaderboard__avatar">MC</div>
+            <div class="mini-leaderboard__info">
+              <div class="mini-leaderboard__name">ModoClips</div>
+              <div class="mini-leaderboard__points">420 puntos</div>
+            </div>
+            <span class="mini-leaderboard__score" style="color:var(--clr-text-2);">4.2K</span>
+          </div>
+        </div>
+
+        <!-- Chart: viewers trend -->
+        <div class="animate-on-scroll" style="margin-top:1.5rem;background:var(--clr-surface-2);border:1px solid var(--clr-border);border-radius:var(--radius-md);padding:1.25rem;">
+          <p style="font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--clr-text-3);margin-bottom:.4rem;">Espectadores – últimas 7h</p>
+          <p style="font-family:var(--font-mono);font-size:1.3rem;font-weight:700;color:var(--clr-text-1);margin-bottom:.75rem;">
+            48,200 <span style="font-size:.7rem;color:var(--clr-success);font-weight:600;">↑ +12%</span>
+          </p>
+          <div class="bar-chart" style="height:60px;" role="img" aria-label="Gráfico de espectadores por hora">
+            <div class="bar-chart__bar" style="height:30%" title="1h: 14,400"></div>
+            <div class="bar-chart__bar" style="height:50%" title="2h: 24,000"></div>
+            <div class="bar-chart__bar" style="height:65%" title="3h: 31,200"></div>
+            <div class="bar-chart__bar" style="height:55%" title="4h: 26,400"></div>
+            <div class="bar-chart__bar" style="height:75%" title="5h: 36,000"></div>
+            <div class="bar-chart__bar bar-chart__bar--accent" style="height:90%" title="6h: 43,200"></div>
+            <div class="bar-chart__bar bar-chart__bar--accent" style="height:100%" title="7h: 48,200"></div>
+          </div>
+          <div class="bar-chart__labels" aria-hidden="true">
+            <div class="bar-chart__label">1h</div>
+            <div class="bar-chart__label">2h</div>
+            <div class="bar-chart__label">3h</div>
+            <div class="bar-chart__label">4h</div>
+            <div class="bar-chart__label">5h</div>
+            <div class="bar-chart__label">6h</div>
+            <div class="bar-chart__label">ahora</div>
+          </div>
+        </div>
+
+      </div><!-- sidebar -->
+
+    </div><!-- .container -->
+  </section>
+
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <span class="footer__brand">LA GANGA</span>
+      <nav class="footer__links" aria-label="Redes sociales y enlaces">
+        <a href="https://www.twitch.tv/westcol" target="_blank" rel="noopener noreferrer" aria-label="Twitch de Westcol">Twitch</a>
+        <a href="#rankings">Rankings</a>
+        <a href="#clips">Clips</a>
+        <a href="#comunidad">Comunidad</a>
+      </nav>
+      <p class="footer__copy">
+        © <span id="year"></span> lagangaw.com · Fan page no oficial
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
